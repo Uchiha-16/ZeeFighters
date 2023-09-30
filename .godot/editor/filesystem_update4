@@ -1,0 +1,16 @@
+res://default_env.tres
+res://UI/MainMenu/main_menu.tscn
+res://Characters/Fox/StateMachineFox.gd
+res://Characters/Fox/FoxSprite.tres
+res://Characters/Wolf/WOLF SPRITES.tres
+res://UI/Map_Select/default_theme.tres
+res://Stages/Planet Namek.tscn
+res://Stages/Stage Assets/Ledge.tscn
+res://Characters/Fox/Fox.tscn
+res://Characters/Wolf/Wolf.tscn
+res://UI/Map_Select/level_select_screen.tscn
+res://UI/Map_Select/lvl_btn.tscn
+res://Stages/Kame House.tscn
+res://UI/player_1_wins.tscn
+res://UI/player_2_wins.tscn
+res://Music/menuAudio.tscn

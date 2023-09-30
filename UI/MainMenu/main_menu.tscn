@@ -1,0 +1,396 @@
+[gd_scene load_steps=19 format=3 uid="uid://ppnqcrm3fp7e"]
+
+[ext_resource type="Script" path="res://UI/MainMenu/Scripts/main_menu.gd" id="1_5ufm3"]
+[ext_resource type="VideoStream" path="res://UI/MainMenu/Dragon-Ball-Z-goku-Background-video-loop-neon-fast-_.ogv" id="2_w558b"]
+[ext_resource type="Script" path="res://UI/MainMenu/VideoStreamPlayer.gd" id="3_2kmsn"]
+
+[sub_resource type="SystemFont" id="SystemFont_up1wb"]
+font_names = PackedStringArray("SPACE MISSION")
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_ebqgb"]
+base_font = SubResource("SystemFont_up1wb")
+
+[sub_resource type="SystemFont" id="SystemFont_uujnd"]
+font_names = PackedStringArray("Cascadia Code")
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_kuea1"]
+base_font = SubResource("SystemFont_uujnd")
+variation_opentype = {
+2003265652: 400
+}
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w4hj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oec8b"]
+size = Vector2(611.527, 97.5505)
+
+[sub_resource type="SystemFont" id="SystemFont_436yv"]
+font_names = PackedStringArray("Cascadia Code")
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_6go7j"]
+base_font = SubResource("SystemFont_436yv")
+variation_opentype = {
+2003265652: 400
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjj0w"]
+size = Vector2(612.488, 96.542)
+
+[sub_resource type="SystemFont" id="SystemFont_ndwjk"]
+font_names = PackedStringArray("Cascadia Code")
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_iyebt"]
+base_font = SubResource("SystemFont_ndwjk")
+variation_opentype = {
+2003265652: 400
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ij6o"]
+size = Vector2(610.724, 95.7047)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk3ih"]
+size = Vector2(103, 66.5)
+
+[sub_resource type="SystemFont" id="SystemFont_qdf27"]
+font_names = PackedStringArray("Candara")
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_4acyp"]
+base_font = SubResource("SystemFont_qdf27")
+
+[node name="Main Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ufm3")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_top = -7.0
+offset_right = 1923.0
+offset_bottom = 1081.0
+stream = ExtResource("2_w558b")
+autoplay = true
+script = ExtResource("3_2kmsn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 18.0
+offset_right = 2135.0
+offset_bottom = 480.0
+theme_override_colors/font_color = Color(0.960784, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ebqgb")
+theme_override_font_sizes/font_size = 200
+text = "Zee 
+Fighters
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 165.0
+offset_top = 393.0
+offset_right = 777.0
+offset_bottom = 836.0
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Play" type="Button" parent="Menu"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_kuea1")
+theme_override_font_sizes/font_size = 75
+text = "Play"
+icon = SubResource("ViewportTexture_w4hj7")
+
+[node name="Area2D" type="Area2D" parent="Menu/Play"]
+position = Vector2(0, 0.0428123)
+collision_layer = 65536
+collision_mask = 524288
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Menu/Play/Area2D"]
+position = Vector2(306.236, 49.1819)
+shape = SubResource("RectangleShape2D_oec8b")
+
+[node name="Option" type="Button" parent="Menu"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_6go7j")
+theme_override_font_sizes/font_size = 75
+text = "OPTIONS"
+
+[node name="Area2D" type="Area2D" parent="Menu/Option"]
+collision_layer = 65536
+collision_mask = 524288
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Menu/Option/Area2D"]
+position = Vector2(306.756, 48.729)
+shape = SubResource("RectangleShape2D_fjj0w")
+
+[node name="Exit" type="Button" parent="Menu"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_iyebt")
+theme_override_font_sizes/font_size = 75
+text = "Exit"
+
+[node name="Area2D" type="Area2D" parent="Menu/Exit"]
+collision_layer = 65536
+collision_mask = 524288
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Menu/Exit/Area2D"]
+position = Vector2(305.638, 48.1476)
+shape = SubResource("RectangleShape2D_4ij6o")
+
+[node name="Pointer" type="Area2D" parent="."]
+position = Vector2(-268, 50)
+collision_layer = 524288
+collision_mask = 65536
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pointer"]
+position = Vector2(1238, 408.25)
+shape = SubResource("RectangleShape2D_gk3ih")
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.5
+offset_right = 964.0
+offset_bottom = 540.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -885.0
+offset_top = -246.0
+offset_right = -366.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+alignment = 1
+
+[node name="Audio" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Audio"
+
+[node name="Video" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Video"
+
+[node name="BackFromOptions" type="Button" parent="Options"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 774.5
+offset_right = 319.0
+offset_bottom = 883.5
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="Video" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackFromVideo" type="Button" parent="Video"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 882.0
+offset_right = 298.0
+offset_bottom = 991.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="Checks" type="VBoxContainer" parent="Video"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 674.0
+offset_top = 449.0
+offset_right = -1186.0
+offset_bottom = 531.0
+grow_horizontal = 2
+scale = Vector2(4.5, 4.5)
+pivot_offset = Vector2(10, 0)
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="FullScreen" type="CheckBox" parent="Video/Checks"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 16.93
+expand_icon = true
+
+[node name="Borderless" type="CheckBox" parent="Video/Checks"]
+layout_mode = 2
+
+[node name="VSync" type="CheckBox" parent="Video/Checks"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="Video"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -827.0
+offset_top = -76.0
+offset_right = -602.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="FullScreen" type="Label" parent="Video/Labels"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_4acyp")
+theme_override_font_sizes/font_size = 50
+text = "Fullscreen"
+
+[node name="Borderless" type="Label" parent="Video/Labels"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_4acyp")
+theme_override_font_sizes/font_size = 50
+text = "Borderless"
+
+[node name="VSync" type="Label" parent="Video/Labels"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_4acyp")
+theme_override_font_sizes/font_size = 50
+text = "VSync"
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sliders" type="VBoxContainer" parent="Audio"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 622.0
+offset_top = 318.0
+offset_right = 695.0
+offset_bottom = 422.0
+grow_horizontal = 2
+scale = Vector2(6, 6)
+pivot_offset = Vector2(10, 0)
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Master" type="HSlider" parent="Audio/Sliders"]
+layout_mode = 2
+
+[node name="Music" type="HSlider" parent="Audio/Sliders"]
+layout_mode = 2
+
+[node name="Sound FX" type="HSlider" parent="Audio/Sliders"]
+layout_mode = 2
+
+[node name="Labels2" type="VBoxContainer" parent="Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = 447.0
+offset_right = 287.0
+offset_bottom = 622.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Master" type="Label" parent="Audio/Labels2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_4acyp")
+theme_override_font_sizes/font_size = 50
+text = "Master"
+
+[node name="Music" type="Label" parent="Audio/Labels2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_4acyp")
+theme_override_font_sizes/font_size = 50
+text = "Music"
+
+[node name="Sound FX" type="Label" parent="Audio/Labels2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_4acyp")
+theme_override_font_sizes/font_size = 50
+text = "Sound FX"
+
+[node name="BackFromAudio" type="Button" parent="Audio"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 922.0
+offset_right = 269.0
+offset_bottom = 1031.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="Popup" type="Popup" parent="."]
+
+[connection signal="focus_entered" from="Menu/Play" to="Menu/Play" method="_on_SinglePlayerButton_focus_entered"]
+[connection signal="focus_exited" from="Menu/Play" to="Menu/Play" method="_on_SinglePlayerButton_focus_exited"]
+[connection signal="pressed" from="Menu/Play" to="." method="_on_play_pressed"]
+[connection signal="area_entered" from="Menu/Play/Area2D" to="Menu/Play" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Menu/Play/Area2D" to="Menu/Play" method="_on_Area2D_area_exited"]
+[connection signal="focus_entered" from="Menu/Option" to="Menu/Option" method="_on_OptionsButton_focus_entered"]
+[connection signal="focus_exited" from="Menu/Option" to="Menu/Option" method="_on_OptionsButton_focus_exited"]
+[connection signal="pressed" from="Menu/Option" to="." method="_on_option_pressed"]
+[connection signal="area_entered" from="Menu/Option/Area2D" to="Menu/Option" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Menu/Option/Area2D" to="Menu/Option" method="_on_Area2D_area_exited"]
+[connection signal="focus_entered" from="Menu/Exit" to="Menu/Exit" method="_on_QuitButton_focus_entered"]
+[connection signal="focus_exited" from="Menu/Exit" to="Menu/Exit" method="_on_QuitPlayerButton_focus_exited"]
+[connection signal="pressed" from="Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="area_entered" from="Menu/Exit/Area2D" to="Menu/Exit" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Menu/Exit/Area2D" to="Menu/Exit" method="_on_area_2d_area_exited"]
+[connection signal="pressed" from="Options/VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="Options/BackFromOptions" to="." method="_on_back_from_options_pressed"]
+[connection signal="pressed" from="Video/BackFromVideo" to="." method="_on_back_from_video_pressed"]
+[connection signal="toggled" from="Video/Checks/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="toggled" from="Video/Checks/Borderless" to="." method="_on_borderless_toggled"]
+[connection signal="toggled" from="Video/Checks/VSync" to="." method="_on_v_sync_toggled"]
+[connection signal="value_changed" from="Audio/Sliders/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="Audio/Sliders/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="Audio/Sliders/Sound FX" to="." method="_on_sound_fx_value_changed"]
+[connection signal="pressed" from="Audio/BackFromAudio" to="." method="_on_back_from_audio_pressed"]

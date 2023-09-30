@@ -1,0 +1,149 @@
+[gd_scene load_steps=12 format=3 uid="uid://buiih8r262gno"]
+
+[ext_resource type="Texture2D" uid="uid://bri441y1lmjnv" path="res://Stages/Smashville/102.png" id="1_rbq6f"]
+[ext_resource type="Texture2D" uid="uid://ei64tgvk4krk" path="res://Stages/Smashville/96.png" id="2_6xm6n"]
+[ext_resource type="Texture2D" uid="uid://maif14s6xoia" path="res://Stages/Smashville/Land-of-the-Kais.png" id="3_prouc"]
+[ext_resource type="Texture2D" uid="uid://8f3eu5dmiyip" path="res://Stages/Smashville/1.png" id="4_4ps5i"]
+[ext_resource type="Script" path="res://Stages/Stage Assets/StageCamera.gd" id="5_71nlm"]
+[ext_resource type="PackedScene" uid="uid://rjxc1dai050l" path="res://Characters/Fox/Fox.tscn" id="6_2jwjg"]
+[ext_resource type="PackedScene" uid="uid://rpc7gfbb1jd7" path="res://Characters/Wolf/Wolf.tscn" id="7_m8vf4"]
+[ext_resource type="PackedScene" uid="uid://kri2rjl3b48c" path="res://Stages/Stage Assets/Ledge.tscn" id="8_rj4kq"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(2150, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoq0q"]
+size = Vector2(980, 1106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_311x3"]
+size = Vector2(980, 1106)
+
+[node name="Planet Namek" type="Node2D"]
+position = Vector2(818, 541)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Blue Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(818, 541)
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Blue Sky"]
+position = Vector2(12, -333)
+scale = Vector2(1.977, 1.977)
+texture = ExtResource("1_rbq6f")
+
+[node name="Fog" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(818, 541)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Fog"]
+position = Vector2(-13, -627)
+scale = Vector2(1.977, 1.977)
+texture = ExtResource("2_6xm6n")
+
+[node name="Main BG" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(818, 541)
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Main BG"]
+position = Vector2(10.75, -70)
+scale = Vector2(1.17734, 1.16667)
+texture = ExtResource("3_prouc")
+
+[node name="Template" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(15, 13)
+scale = Vector2(2, 2)
+texture = ExtResource("4_4ps5i")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(-121, 538)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(165, -12)
+shape = SubResource("1")
+
+[node name="Label" type="Label" parent="Floor"]
+visible = false
+offset_left = -16.0
+offset_top = 4.0
+offset_right = 24.0
+offset_bottom = 18.0
+text = "floor"
+
+[node name="SideWall1" type="StaticBody2D" parent="."]
+position = Vector2(-265, 54)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideWall1"]
+position = Vector2(-1254, -44)
+shape = SubResource("RectangleShape2D_xoq0q")
+
+[node name="Label" type="Label" parent="SideWall1"]
+visible = false
+offset_left = -16.0
+offset_top = 4.0
+offset_right = 24.0
+offset_bottom = 18.0
+text = "floor"
+
+[node name="SideWall2" type="StaticBody2D" parent="."]
+position = Vector2(-265, 54)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideWall2"]
+position = Vector2(1784, -55)
+shape = SubResource("RectangleShape2D_311x3")
+
+[node name="Label" type="Label" parent="SideWall2"]
+visible = false
+offset_left = -16.0
+offset_top = 4.0
+offset_right = 24.0
+offset_bottom = 18.0
+text = "floor"
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(-130, 518)
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+position = Vector2(-420, 42)
+polygon = PackedVector2Array(-480, -50, -420, 9, -339, 47, 1236, 56, 1418, 18, 1665, -56)
+
+[node name="Label" type="Label" parent="Wall"]
+visible = false
+offset_left = -16.0
+offset_top = 12.0
+offset_right = 24.0
+offset_bottom = 26.0
+text = "wall"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(67, -12)
+scale = Vector2(5, 5)
+limit_left = -306
+limit_top = -161
+limit_right = 1962
+limit_bottom = 1103
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_right_margin = 0.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("5_71nlm")
+
+[node name="FOX" parent="." instance=ExtResource("6_2jwjg")]
+position = Vector2(-695, 412)
+id = 1
+
+[node name="WOLF" parent="." instance=ExtResource("7_m8vf4")]
+position = Vector2(385, 424)
+id = 2
+
+[node name="Ledge" parent="." instance=ExtResource("8_rj4kq")]
+position = Vector2(-263, 74)
+
+[node name="Ledge2" parent="." instance=ExtResource("8_rj4kq")]
+position = Vector2(353, 88)

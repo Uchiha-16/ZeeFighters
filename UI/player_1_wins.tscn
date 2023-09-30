@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhadf5papfh0a"]
+
+[ext_resource type="Texture2D" uid="uid://016j20kmwcjg" path="res://Stages/wp6003801-dragon-ball-z-hd-mobile-black-and-white-wallpapers.jpg" id="1_31c1a"]
+[ext_resource type="Texture2D" uid="uid://csx4dq3y5x2og" path="res://Stages/GameOver.png" id="2_b7o4r"]
+[ext_resource type="Script" path="res://UI/Rematch1.gd" id="3_rvljd"]
+[ext_resource type="Script" path="res://UI/Exit to Main Menu1.gd" id="4_72mhq"]
+
+[sub_resource type="SystemFont" id="SystemFont_766y0"]
+font_names = PackedStringArray("SPACE MISSION")
+subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_ss2t3"]
+base_font = SubResource("SystemFont_766y0")
+
+[node name="Player 1 Wins" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 890.0
+offset_top = 476.0
+offset_right = 930.0
+offset_bottom = 516.0
+
+[node name="Wp6003801-dragon-ball-z-hd-mobile-black-and-white-wallpapers" type="Sprite2D" parent="."]
+position = Vector2(66.4999, 62.5)
+scale = Vector2(1.78241, 0.567187)
+texture = ExtResource("1_31c1a")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(230.75, 152.625)
+scale = Vector2(0.538333, 0.642167)
+texture = ExtResource("2_b7o4r")
+
+[node name="Winner Banner" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -420.0
+offset_top = -393.0
+offset_right = 815.0
+offset_bottom = -228.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.941176, 0.882353, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ss2t3")
+theme_override_font_sizes/font_size = 120
+text = "Goku is the Winner"
+
+[node name="Rematch" type="Button" parent="."]
+layout_mode = 0
+offset_left = -723.0
+offset_top = -61.0
+offset_right = -275.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 50
+text = "Rematch"
+script = ExtResource("3_rvljd")
+
+[node name="Exit to Main Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = -726.0
+offset_top = 160.0
+offset_right = -278.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 50
+text = "Exit to Main Menu"
+script = ExtResource("4_72mhq")
+
+[connection signal="pressed" from="Rematch" to="Rematch" method="_on_pressed"]
+[connection signal="pressed" from="Exit to Main Menu" to="Exit to Main Menu" method="_on_back_pressed"]

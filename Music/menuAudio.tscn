@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bblsnqbvkvogr"]
+
+[ext_resource type="AudioStream" uid="uid://d4bklr1fbbjdb" path="res://Music/dragon-ball-music_dbz-ost-saga-de-majin-boo-goten-y-trunks.wav" id="1_xaa1l"]
+[ext_resource type="Script" path="res://Music/menuAudio.gd" id="2_0ke17"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_xaa1l")
+volume_db = -15.605
+autoplay = true
+script = ExtResource("2_0ke17")

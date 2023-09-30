@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqndo0m7oco5v"]
+
+[ext_resource type="Texture2D" uid="uid://016j20kmwcjg" path="res://Stages/wp6003801-dragon-ball-z-hd-mobile-black-and-white-wallpapers.jpg" id="1_k5kv6"]
+[ext_resource type="Texture2D" uid="uid://csx4dq3y5x2og" path="res://Stages/GameOver.png" id="2_kmfpi"]
+[ext_resource type="Script" path="res://UI/Rematch2.gd" id="3_v8tr7"]
+[ext_resource type="Script" path="res://UI/Exit to Main Menu2.gd" id="4_x2o3p"]
+
+[sub_resource type="SystemFont" id="SystemFont_766y0"]
+font_names = PackedStringArray("SPACE MISSION")
+subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_ss2t3"]
+base_font = SubResource("SystemFont_766y0")
+
+[node name="Player 2 Wins" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Wp6003801-dragon-ball-z-hd-mobile-black-and-white-wallpapers" type="Sprite2D" parent="."]
+position = Vector2(961, 543)
+scale = Vector2(1.77407, 0.566667)
+texture = ExtResource("1_k5kv6")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(1085, 626)
+scale = Vector2(0.585333, 0.569)
+texture = ExtResource("2_kmfpi")
+
+[node name="Winner Banner" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 403.0
+offset_top = 92.0
+offset_right = 1638.0
+offset_bottom = 257.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.941176, 0.882353, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ss2t3")
+theme_override_font_sizes/font_size = 120
+text = "Vegeta is the Winner"
+
+[node name="Rematch" type="Button" parent="."]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 409.0
+offset_right = 597.0
+offset_bottom = 574.0
+theme_override_font_sizes/font_size = 50
+text = "Rematch"
+script = ExtResource("3_v8tr7")
+
+[node name="Exit to Main Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 634.0
+offset_right = 598.0
+offset_bottom = 799.0
+theme_override_font_sizes/font_size = 50
+text = "Exit to Main Menu"
+script = ExtResource("4_x2o3p")
+
+[connection signal="pressed" from="Rematch" to="Rematch" method="_on_pressed"]
+[connection signal="pressed" from="Exit to Main Menu" to="Exit to Main Menu" method="_on_back_pressed"]

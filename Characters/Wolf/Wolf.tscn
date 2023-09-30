@@ -1,0 +1,182 @@
+[gd_scene load_steps=16 format=3 uid="uid://rpc7gfbb1jd7"]
+
+[ext_resource type="SpriteFrames" uid="uid://dctce3wicgbws" path="res://Characters/Wolf/WOLF SPRITES.tres" id="1_2qqy7"]
+[ext_resource type="Script" path="res://Characters/Wolf/Wolf.gd" id="1_btpbo"]
+[ext_resource type="PackedScene" uid="uid://c0vr38g52o5jl" path="res://Hitbox/Hitbox.tscn" id="2_af6cf"]
+[ext_resource type="AnimationLibrary" uid="uid://cs3da6bhwsaly" path="res://Characters/Wolf/WolfAnimationLibrary.res" id="2_j8k7f"]
+[ext_resource type="Script" path="res://Characters/Wolf/StateMachineWolf.gd" id="2_o3gt4"]
+[ext_resource type="PackedScene" uid="uid://c365wbvot4nlh" path="res://Characters/Wolf/Projectile_Wolf_Laser.tscn" id="3_oqhpb"]
+[ext_resource type="AudioStream" uid="uid://b4wgni8hhwhmw" path="res://Music/hurt.wav" id="7_tc7uj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25vm3"]
+size = Vector2(41.5, 73.5)
+
+[sub_resource type="SystemFont" id="SystemFont_4gxdn"]
+font_names = PackedStringArray("TF2 Secondary", "TF2 Build")
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_75td6"]
+base_font = SubResource("SystemFont_4gxdn")
+
+[sub_resource type="SystemFont" id="SystemFont_tlvxr"]
+font_names = PackedStringArray("TF2 Build", "TF2 Secondary")
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_2pnma"]
+base_font = SubResource("SystemFont_tlvxr")
+
+[sub_resource type="FontVariation" id="FontVariation_8nr82"]
+base_font = SubResource("SystemFont_4gxdn")
+
+[sub_resource type="SystemFont" id="SystemFont_iwtst"]
+font_names = PackedStringArray("SPACE MISSION")
+subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_j5nvp"]
+base_font = SubResource("SystemFont_iwtst")
+fallbacks = Array[Font]([null])
+
+[node name="WOLF" type="CharacterBody2D" groups=["Character"]]
+position = Vector2(866, 447)
+scale = Vector2(3, 3)
+collision_mask = 6
+slide_on_ceiling = false
+platform_on_leave = 2
+platform_floor_layers = 6
+script = ExtResource("1_btpbo")
+hitbox = ExtResource("2_af6cf")
+projectile = ExtResource("3_oqhpb")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_o3gt4")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_25vm3")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("1_2qqy7")
+animation = &"IDLE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+unique_name_in_owner = true
+libraries = {
+"": ExtResource("2_j8k7f")
+}
+
+[node name="Raycasts" type="Node2D" parent="."]
+
+[node name="GroundL" type="RayCast2D" parent="Raycasts"]
+position = Vector2(-30, 40)
+target_position = Vector2(0, 10)
+collision_mask = 6
+hit_from_inside = true
+
+[node name="GroundR" type="RayCast2D" parent="Raycasts"]
+position = Vector2(30, 40)
+target_position = Vector2(0, 10)
+collision_mask = 6
+hit_from_inside = true
+
+[node name="Ledge_Grab_F" type="RayCast2D" parent="Raycasts"]
+position = Vector2(22, -15)
+scale = Vector2(3, 3)
+target_position = Vector2(20, 0)
+collision_mask = 8
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Ledge_Grab_B" type="RayCast2D" parent="Raycasts"]
+position = Vector2(0, -38)
+scale = Vector2(3, 3)
+target_position = Vector2(-11, 0)
+collision_mask = 8
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Frames" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -76.0
+offset_right = 20.0
+offset_bottom = -62.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("FontVariation_75td6")
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="State" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -60.0
+offset_right = 20.0
+offset_bottom = -46.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("FontVariation_2pnma")
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health" type="Label" parent="."]
+visible = false
+offset_left = 38.0
+offset_top = -54.0
+offset_right = 78.0
+offset_bottom = -40.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontVariation_8nr82")
+text = "Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gun_pos" type="Marker2D" parent="."]
+position = Vector2(32, 0)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_mask = 6
+
+[node name="Hurtbox" type="CollisionShape2D" parent="Hurtbox"]
+unique_name_in_owner = true
+position = Vector2(-5, -1.5)
+shape = SubResource("RectangleShape2D_25vm3")
+debug_color = Color(0.352941, 0, 0.00784314, 0.419608)
+
+[node name="Parrybox" type="Area2D" parent="."]
+collision_mask = 6
+
+[node name="Parrybox" type="CollisionShape2D" parent="Parrybox"]
+unique_name_in_owner = true
+position = Vector2(-4.25, -6.75)
+shape = SubResource("RectangleShape2D_25vm3")
+disabled = true
+debug_color = Color(1, 0.298039, 0.254902, 0.419608)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.12549, 0.701961, 0.113725, 1)
+offset_left = -63.0
+offset_top = -67.5
+offset_right = 69.0
+offset_bottom = -48.5
+show_percentage = false
+
+[node name="Vegeta" type="Label" parent="."]
+offset_left = -56.5
+offset_top = -92.0
+offset_right = 24.5
+offset_bottom = -64.0
+theme_override_colors/font_color = Color(0.862745, 0.627451, 0.105882, 1)
+theme_override_fonts/font = SubResource("FontVariation_j5nvp")
+theme_override_font_sizes/font_size = 24
+text = "Vegeta"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_tc7uj")

@@ -1,0 +1,157 @@
+[gd_scene load_steps=7 format=3 uid="uid://b37am2st7jsq7"]
+
+[ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://UI/Map_Select/default_theme.tres" id="1_q2hyr"]
+[ext_resource type="Script" path="res://UI/Map_Select/level_select_screen.gd" id="2_cntoa"]
+[ext_resource type="VideoStream" path="res://UI/Map_Select/vegeta-ultra-ego.3840x2160.ogv" id="3_3rrpg"]
+[ext_resource type="Script" path="res://UI/Map_Select/VideoStreamPlayer.gd" id="3_f4bfk"]
+
+[sub_resource type="SystemFont" id="SystemFont_qmkaq"]
+font_names = PackedStringArray("SPACE MISSION")
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_pmmt1"]
+base_font = SubResource("SystemFont_qmkaq")
+
+[node name="LevelSelectScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_q2hyr")
+script = ExtResource("2_cntoa")
+dir_path = "res://Stages"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_3rrpg")
+autoplay = true
+expand = true
+script = ExtResource("3_f4bfk")
+
+[node name="Player 2 Controls" type="Label" parent="."]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+offset_left = 539.0
+offset_top = 209.0
+offset_right = 1485.0
+offset_bottom = 745.0
+theme_override_colors/font_color = Color(0.890196, 0.615686, 0.0862745, 1)
+text = "Player 2
+
+Left-Arrow Key
+Right-Arrow Key
+Down-Arrow Key
+Up-Arrow Key
+KeyPad Enter
+Ctrl"
+
+[node name="Player 1 Controls" type="Label" parent="."]
+layout_mode = 2
+offset_left = 310.0
+offset_top = 210.0
+offset_right = 1256.0
+offset_bottom = 746.0
+theme_override_colors/font_color = Color(0.890196, 0.615686, 0.0862745, 1)
+text = "Player 1 
+
+A
+D
+S
+Space
+R
+E"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 964.0
+offset_top = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_pmmt1")
+theme_override_font_sizes/font_size = 100
+text = "Select Map"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+
+[node name="Controls" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = -914.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 32
+
+[node name="Game Controls" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_pmmt1")
+theme_override_font_sizes/font_size = 100
+text = "Game Controls"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 343.0
+offset_right = 314.0
+offset_bottom = 745.0
+theme_override_colors/font_color = Color(0.85098, 0, 0, 1)
+text = "Move Left
+Move Right
+Crouch
+Jump
+Attack
+Special "
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 912.0
+offset_right = 349.0
+offset_bottom = 1015.0
+theme_override_font_sizes/font_size = 40
+text = "Back to Menu"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

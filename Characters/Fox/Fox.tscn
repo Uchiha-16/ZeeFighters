@@ -1,0 +1,178 @@
+[gd_scene load_steps=17 format=3 uid="uid://rjxc1dai050l"]
+
+[ext_resource type="PackedScene" uid="uid://dj0l0vs0bb2p0" path="res://Test/Projectile/Projectile_Fox_Laser.tscn" id="3_03acp"]
+[ext_resource type="SpriteFrames" uid="uid://bxbkwb0stfsbf" path="res://Characters/Fox/FoxSprite.tres" id="4_fgs8j"]
+[ext_resource type="AnimationLibrary" uid="uid://cij37t0wue5vg" path="res://Characters/Fox/FoxAnimationLibrary.res" id="5_7ipet"]
+[ext_resource type="AudioStream" uid="uid://c5pqw2agju4np" path="res://Music/attack.wav" id="7_wai56"]
+[ext_resource type="Script" path="res://Characters/Fox/StateMachineFox.gd" id="35"]
+[ext_resource type="Script" path="res://Characters/Fox/Fox.gd" id="36"]
+[ext_resource type="PackedScene" uid="uid://c0vr38g52o5jl" path="res://Hitbox/Hitbox.tscn" id="37"]
+
+[sub_resource type="RectangleShape2D" id="185"]
+size = Vector2(115, 148)
+
+[sub_resource type="SystemFont" id="SystemFont_4gxdn"]
+font_names = PackedStringArray("TF2 Secondary", "TF2 Build")
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_7s7o2"]
+base_font = SubResource("SystemFont_4gxdn")
+
+[sub_resource type="SystemFont" id="SystemFont_tlvxr"]
+font_names = PackedStringArray("TF2 Build", "TF2 Secondary")
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_fhjw6"]
+base_font = SubResource("SystemFont_tlvxr")
+
+[sub_resource type="FontVariation" id="FontVariation_e77rm"]
+base_font = SubResource("SystemFont_4gxdn")
+
+[sub_resource type="SystemFont" id="SystemFont_6eyde"]
+font_names = PackedStringArray("SPACE MISSION")
+subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_ywse1"]
+base_font = SubResource("SystemFont_6eyde")
+
+[sub_resource type="RectangleShape2D" id="186"]
+size = Vector2(40, 20)
+
+[node name="FOX" type="CharacterBody2D"]
+position = Vector2(0, -1)
+scale = Vector2(1.5, 1.5)
+collision_mask = 6
+slide_on_ceiling = false
+platform_on_leave = 2
+platform_floor_layers = 6
+script = ExtResource("36")
+hitbox = ExtResource("37")
+projectile = ExtResource("3_03acp")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("35")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(15, -1)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("4_fgs8j")
+animation = &"IDLE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": ExtResource("5_7ipet")
+}
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 6)
+shape = SubResource("185")
+
+[node name="Raycasts" type="Node2D" parent="."]
+
+[node name="GroundL" type="RayCast2D" parent="Raycasts"]
+position = Vector2(-39, 81)
+target_position = Vector2(0, 10)
+collision_mask = 6
+hit_from_inside = true
+
+[node name="GroundR" type="RayCast2D" parent="Raycasts"]
+position = Vector2(70, 79)
+target_position = Vector2(0, 10)
+collision_mask = 6
+hit_from_inside = true
+
+[node name="Ledge_Grab_F" type="RayCast2D" parent="Raycasts"]
+position = Vector2(56, -31)
+scale = Vector2(3, 3)
+target_position = Vector2(20, 0)
+collision_mask = 8
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Ledge_Grab_B" type="RayCast2D" parent="Raycasts"]
+position = Vector2(-10, -61)
+scale = Vector2(3, 3)
+target_position = Vector2(-11, 0)
+collision_mask = 8
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Frames" type="Label" parent="."]
+visible = false
+offset_left = -10.0
+offset_top = -144.0
+offset_right = 30.0
+offset_bottom = -113.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("FontVariation_7s7o2")
+theme_override_font_sizes/font_size = 20
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="State" type="Label" parent="."]
+visible = false
+offset_left = -11.0
+offset_top = -118.0
+offset_right = 39.0
+offset_bottom = -87.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("FontVariation_fhjw6")
+theme_override_font_sizes/font_size = 20
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health" type="Label" parent="."]
+visible = false
+offset_left = 105.0
+offset_top = -73.0
+offset_right = 191.0
+offset_bottom = -36.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontVariation_e77rm")
+theme_override_font_sizes/font_size = 20
+text = "Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Goku" type="Label" parent="."]
+offset_left = -83.3333
+offset_top = -184.0
+offset_right = 19.6667
+offset_bottom = -136.0
+theme_override_colors/font_color = Color(0.862745, 0.627451, 0.105882, 1)
+theme_override_fonts/font = SubResource("FontVariation_ywse1")
+theme_override_font_sizes/font_size = 45
+text = "Goku"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(62, 32)
+shape = SubResource("186")
+disabled = true
+
+[node name="gun_pos" type="Marker2D" parent="."]
+position = Vector2(41, 0)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.12549, 0.701961, 0.113725, 1)
+offset_left = -92.0
+offset_top = -137.0
+offset_right = 40.0
+offset_bottom = -118.0
+scale = Vector2(2, 2)
+show_percentage = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_wai56")
+pitch_scale = 1.07
+bus = &"Sound FX"
