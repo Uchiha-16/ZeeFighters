@@ -1,22 +1,23 @@
 2a60927148abd1d33b818b535e306557
-::res://::1696093998
+::res://::1696099212
 CollisionBox Test.gd::GDScript::-1::1695492291::0::1::::TestBox<>Node2D<>::
 default_bus_layout.tres::AudioBusLayout::254129264306584182::1696009179::0::1::::<><>::
-default_env.tres::Environment::578917196601022604::1696093357::0::1::::<><>::
+default_env.tres::Environment::578917196601022604::1696095051::0::1::::<><>::
 FoxAnimationLibrary.res::AnimationLibrary::8626086849976787918::1695489669::0::1::::<><>::
 icon.png::CompressedTexture2D::8474845358949069659::1668985462::1677956222::1::::<><>::
+README.md::TextFile::-1::1696098352::0::1::::<><>::
 StateMachine.gd::GDScript::-1::1677956183::0::1::::StateMachine<>Node<>::
 ::res://Autoload/::1695488972
 Globals.gd::GDScript::-1::1678116918::0::1::::<>Node<>::
 ::res://Characters/::1695506982
-::res://Characters/Fox/::1696093356
+::res://Characters/Fox/::1696095050
 charselect.ogg::AudioStreamOggVorbis::2560116274648647571::1669402770::1677956192::1::::<><>::
 charselect.png::CompressedTexture2D::1831588175140935730::1669402770::1677956221::1::::<><>::
 config.ini::TextFile::-1::1669402770::0::1::::<><>::
 Fox.gd::GDScript::-1::1696078652::0::1::::<>CharacterBody2D<>::
-Fox.tscn::PackedScene::1213191174307752797::1696093356::0::1::::<><>::uid://dj0l0vs0bb2p0<>uid://bxbkwb0stfsbf<>uid://cij37t0wue5vg<>uid://c5pqw2agju4np<>res://Characters/Fox/StateMachineFox.gd<>res://Characters/Fox/Fox.gd<>uid://c0vr38g52o5jl
+Fox.tscn::PackedScene::1213191174307752797::1696095050::0::1::::<><>::uid://dj0l0vs0bb2p0<>uid://bxbkwb0stfsbf<>uid://cij37t0wue5vg<>uid://c5pqw2agju4np<>res://Characters/Fox/StateMachineFox.gd<>res://Characters/Fox/Fox.gd<>uid://c0vr38g52o5jl
 FoxAnimationLibrary.res::AnimationLibrary::5354689775069678632::1696090662::0::1::::<><>::uid://c5pqw2agju4np<>uid://b4wgni8hhwhmw
-FoxSprite.tres::SpriteFrames::4003475014502383943::1696089930::0::1::::<><>::uid://brlv3jk1m6me0<>uid://cxr8estis3flf<>uid://r8qbkwolviwq<>uid://bkihgbpvvgdfh<>uid://bycctah81lxn7<>uid://dv4qm5f1j34l0<>uid://c37xrg7ymfhqx<>uid://dbnnh8nddxksm<>uid://c1p6d53ooslbv<>uid://cqkojmedrrbbo<>uid://csb3lphbydlq4<>uid://cseqhx6vwgl8i<>uid://bayc15ut5vwx1<>uid://5km1kpsa1a7f<>uid://cfq1f3hpike6p<>uid://cchhj6fhhvt4j<>uid://c06e82nolitgy<>uid://dollefauvvo1k<>uid://cqg25iw5e6qcf<>uid://docy46sk7r8s1<>uid://s0vsrvpkys3c<>uid://7ygonqvdueen<>uid://dcw5kaeu3fvnr<>uid://k5rbrwumges4<>uid://l7ogj858ccvx<>uid://ha25hlkxch03<>uid://c58fwo3if20bp<>uid://7iw3tlsrctow<>uid://cav5i3i12eiij<>uid://dntxlcna72vgc<>uid://d0wkfbts3q8k0<>uid://c87elpxsx5ogr<>uid://nn0346g6wbso<>uid://bvu2e6e8nwe4w
+FoxSprite.tres::SpriteFrames::4003475014502383943::1696094004::0::1::::<><>::uid://brlv3jk1m6me0<>uid://cxr8estis3flf<>uid://r8qbkwolviwq<>uid://bkihgbpvvgdfh<>uid://bycctah81lxn7<>uid://dv4qm5f1j34l0<>uid://c37xrg7ymfhqx<>uid://dbnnh8nddxksm<>uid://c1p6d53ooslbv<>uid://cqkojmedrrbbo<>uid://csb3lphbydlq4<>uid://cseqhx6vwgl8i<>uid://bayc15ut5vwx1<>uid://5km1kpsa1a7f<>uid://cfq1f3hpike6p<>uid://cchhj6fhhvt4j<>uid://c06e82nolitgy<>uid://dollefauvvo1k<>uid://cqg25iw5e6qcf<>uid://docy46sk7r8s1<>uid://s0vsrvpkys3c<>uid://7ygonqvdueen<>uid://dcw5kaeu3fvnr<>uid://k5rbrwumges4<>uid://l7ogj858ccvx<>uid://ha25hlkxch03<>uid://c58fwo3if20bp<>uid://7iw3tlsrctow<>uid://cav5i3i12eiij<>uid://dntxlcna72vgc<>uid://d0wkfbts3q8k0<>uid://c87elpxsx5ogr<>uid://nn0346g6wbso<>uid://bvu2e6e8nwe4w
 FoxSprites.tres::SpriteFrames::6041907708622815414::1695489520::0::1::::<><>::uid://tk6gv8yj6kc2<>uid://bf07u4y3hc8t3<>uid://bjvwc0k2ouiiq<>uid://7qsbubk46f2y<>uid://cvvsarl3gyy2m<>uid://b3ot2gq770dg1<>uid://b1et78pvteevo<>uid://qtvmsyg0g8g4<>uid://dxyd0vbsktfko<>uid://0t0yrvblc86v<>uid://cmw7lv84yvse<>uid://dl1012cmfvtwd<>uid://b6jf2f3mq4pvp<>uid://cuakuxxrluivc<>uid://kt4ymwsrr1k<>uid://bnvtvqj7km5x5<>uid://o4cpj5u2lqer<>uid://coikyevba7dvi<>uid://c2tupondmsgo1<>uid://dru162rwfkjk5<>uid://ty201y8okqd<>uid://cgvnhie6e1p2g<>uid://bq4j8ln0n570l<>uid://cnxnrhyqipa51<>uid://bv60gdfdfoane<>uid://vi3jdg5sinpk<>uid://dlk2lkf81xjgf<>uid://dibssh0uxtwoj<>uid://d1titxni5n6xi<>uid://dexvhsjyulthb<>uid://ct7i41ipvsafo<>uid://x3rnt1kubdsx<>uid://d3xp7ccxwb47s<>uid://bupofrbxoeyn8
 hud.png::CompressedTexture2D::2919611433143319895::1669402770::1677956222::1::::<><>::
 hurt.png::CompressedTexture2D::3070805684793604016::1669402770::1677956222::1::::<><>::
@@ -25,7 +26,7 @@ offscreen.png::CompressedTexture2D::3178094731517782245::1669402770::1677956222:
 portrait.png::CompressedTexture2D::4719669263148819731::1669402770::1677956222::1::::<><>::
 preview.png::CompressedTexture2D::1147199954901759621::1669402770::1677956222::1::::<><>::
 result_small.png::CompressedTexture2D::5381844603250332172::1669402770::1677956222::1::::<><>::
-StateMachineFox.gd::GDScript::-1::1696089930::0::1::::<>StateMachine<>::
+StateMachineFox.gd::GDScript::-1::1696094004::0::1::::<>StateMachine<>::
 ::res://Characters/Fox/scripts/::1695488972
 ::res://Characters/Fox/scripts/attacks/::1695488972
 ::res://Characters/Fox/sounds/::1695525409
@@ -146,7 +147,7 @@ walkturn_strip5.png::CompressedTexture2D::940861376526693270::1669402774::167795
 walk_strip4.png::CompressedTexture2D::7155396631505725941::1669402774::1677956221::1::::<><>::
 walljump_strip5.png::CompressedTexture2D::3903322093073974560::1669402774::1677956221::1::::<><>::
 waveland_strip1.png::CompressedTexture2D::6719918013986420603::1669402774::1677956221::1::::<><>::
-::res://Characters/Wolf/::1696093357
+::res://Characters/Wolf/::1696095050
 charselect.png::CompressedTexture2D::26810286978720881::1635692246::1695506985::1::::<><>::
 config.ini::TextFile::-1::1635692246::0::1::::<><>::
 hud.png::CompressedTexture2D::8798890049366761733::1635692246::1695506985::1::::<><>::
@@ -159,9 +160,9 @@ Projectile_Wolf_Laser.gd::GDScript::-1::1679065798::0::1::::<>Area2D<>::
 Projectile_Wolf_Laser.tscn::PackedScene::6803985582502747977::1681578080::0::1::::<><>::res://Characters/Wolf/Projectile_Wolf_Laser.gd<>uid://cvc5u0e50l4ss
 result_small.png::CompressedTexture2D::4968223003262511148::1635692246::1695506985::1::::<><>::
 StateMachineWolf.gd::GDScript::-1::1682897925::0::1::::<>StateMachine<>::
-WOLF SPRITES.tres::SpriteFrames::7338992997849551186::1696089930::0::1::::<><>::uid://bh8ldw68awh3t<>uid://dgwua2wmjotcd<>uid://bopoh26hjbrfk<>uid://nvrod1n6yeu3<>uid://deew2v300v0vn<>uid://drilc70rqvgln<>uid://b6a5has0uv54a<>uid://cojx3dccyuwoy<>uid://q60hn7d4uak6<>uid://bu8sl8jw26j0y<>uid://3kap77grq54t<>uid://h6uk1f66ea5<>uid://df06sijtq0rlt<>uid://b5l5kr76j25nw<>uid://b3kaay8bglg61<>uid://8bl2od7wqjk7<>uid://bj5xljh40tu7t<>uid://bxtvfhfy3gsho<>uid://rk60yt6sbwk1<>uid://dhwoglbxkx64m<>uid://cs85wyqmm3lj2<>uid://dpmlng0wa03lk<>uid://bptaf7ig5e604<>uid://dxxikfoln0lth<>uid://cim1ye6elx778<>uid://naxntk2cf0w<>uid://b0xfij765x7bj<>uid://dofd1hh7wf86f<>uid://c36xtlyuowhys<>uid://bdtqnrpqfq2jc<>uid://dxosf7lf7kc2m
+WOLF SPRITES.tres::SpriteFrames::7338992997849551186::1696094004::0::1::::<><>::uid://bh8ldw68awh3t<>uid://dgwua2wmjotcd<>uid://bopoh26hjbrfk<>uid://nvrod1n6yeu3<>uid://deew2v300v0vn<>uid://drilc70rqvgln<>uid://b6a5has0uv54a<>uid://cojx3dccyuwoy<>uid://q60hn7d4uak6<>uid://bu8sl8jw26j0y<>uid://3kap77grq54t<>uid://h6uk1f66ea5<>uid://df06sijtq0rlt<>uid://b5l5kr76j25nw<>uid://b3kaay8bglg61<>uid://8bl2od7wqjk7<>uid://bj5xljh40tu7t<>uid://bxtvfhfy3gsho<>uid://rk60yt6sbwk1<>uid://dhwoglbxkx64m<>uid://cs85wyqmm3lj2<>uid://dpmlng0wa03lk<>uid://bptaf7ig5e604<>uid://dxxikfoln0lth<>uid://cim1ye6elx778<>uid://naxntk2cf0w<>uid://b0xfij765x7bj<>uid://dofd1hh7wf86f<>uid://c36xtlyuowhys<>uid://bdtqnrpqfq2jc<>uid://dxosf7lf7kc2m
 Wolf.gd::GDScript::-1::1696078662::0::1::::<>CharacterBody2D<>::
-Wolf.tscn::PackedScene::1224354910459863914::1696093357::0::1::::<><>::uid://dctce3wicgbws<>res://Characters/Wolf/Wolf.gd<>uid://c0vr38g52o5jl<>uid://cs3da6bhwsaly<>res://Characters/Wolf/StateMachineWolf.gd<>uid://c365wbvot4nlh<>uid://b4wgni8hhwhmw
+Wolf.tscn::PackedScene::1224354910459863914::1696095050::0::1::::<><>::uid://dctce3wicgbws<>res://Characters/Wolf/Wolf.gd<>uid://c0vr38g52o5jl<>uid://cs3da6bhwsaly<>res://Characters/Wolf/StateMachineWolf.gd<>uid://c365wbvot4nlh<>uid://b4wgni8hhwhmw
 WolfAnimationLibrary.res::AnimationLibrary::6094226911079572254::1696090526::0::1::::<><>::uid://c5pqw2agju4np<>uid://b4wgni8hhwhmw
 WOLF_ANiMATIONS.tres::Animation::-1::1635692246::0::1::::<><>::
 ::res://Characters/Wolf/scripts/::1695506982
@@ -285,18 +286,18 @@ ariblk.ttf::FontFile::1358730999030393868::1575709708::1677956221::1::::<><>::
 ::res://Hitbox/::1695498458
 Hitbox.gd::GDScript::-1::1677962727::0::1::::<>Area2D<>::
 Hitbox.tscn::PackedScene::6571998326217744277::1695498458::0::1::::<><>::res://Hitbox/Hitbox.gd
-::res://Music/::1696093357
+::res://Music/::1696095051
 attack.wav::AudioStreamWAV::6910484520604154925::1695998022::1696089639::1::::<><>::
 dragon-ball-music_dbz-ost-saga-de-majin-boo-goten-y-trunks.wav::AudioStreamWAV::9197430641287351107::1695531351::1695531522::1::::<><>::
 dragon-ball-music_dbz-ost-saga-saiyajin.wav::AudioStreamWAV::2372306332949761665::1695531356::1695531482::1::::<><>::
 hurt.wav::AudioStreamWAV::4467701448556340106::1695998022::1696090448::1::::<><>::
 menuAudio.gd::GDScript::-1::1696080108::0::1::::<>AudioStreamPlayer2D<>::
-menuAudio.tscn::PackedScene::2480434646703106749::1696093357::0::1::::<><>::uid://d4bklr1fbbjdb<>res://Music/menuAudio.gd
-::res://Stages/::1696093357
+menuAudio.tscn::PackedScene::2480434646703106749::1696095051::0::1::::<><>::uid://d4bklr1fbbjdb<>res://Music/menuAudio.gd
+::res://Stages/::1696095051
 GameOver.png::CompressedTexture2D::6085488276145703910::1696077583::1696077616::1::::<><>::
-Kame House.tscn::PackedScene::4442026263845377315::1696093357::0::1::::<><>::res://Stages/Stage Assets/kame-house-dragon-ball-z-moewalls-com.ogv<>res://Stages/VideoStreamPlayer.gd<>uid://8f3eu5dmiyip<>res://Stages/Stage Assets/StageCamera.gd<>uid://rjxc1dai050l<>uid://rpc7gfbb1jd7
+Kame House.tscn::PackedScene::4442026263845377315::1696095051::0::1::::<><>::res://Stages/Stage Assets/kame-house-dragon-ball-z-moewalls-com.ogv<>res://Stages/VideoStreamPlayer.gd<>uid://8f3eu5dmiyip<>res://Stages/Stage Assets/StageCamera.gd<>uid://rjxc1dai050l<>uid://rpc7gfbb1jd7
 Kami's_Lookout.tscn::PackedScene::4407817444406633207::1696078667::0::1::::<><>::uid://cn3p8ppikhi00<>uid://7axg3plk1b3s<>uid://8f3eu5dmiyip<>res://Stages/Stage Assets/StageCamera.gd<>uid://rjxc1dai050l<>uid://rpc7gfbb1jd7
-Planet Namek.tscn::PackedScene::3807212575787174216::1696093356::0::1::::<><>::uid://bri441y1lmjnv<>uid://ei64tgvk4krk<>uid://maif14s6xoia<>uid://8f3eu5dmiyip<>res://Stages/Stage Assets/StageCamera.gd<>uid://rjxc1dai050l<>uid://rpc7gfbb1jd7<>uid://kri2rjl3b48c
+Planet Namek.tscn::PackedScene::3807212575787174216::1696095050::0::1::::<><>::uid://bri441y1lmjnv<>uid://ei64tgvk4krk<>uid://maif14s6xoia<>uid://8f3eu5dmiyip<>res://Stages/Stage Assets/StageCamera.gd<>uid://rjxc1dai050l<>uid://rpc7gfbb1jd7<>uid://kri2rjl3b48c
 Quit.gd::GDScript::-1::1695535887::0::1::::<>Button<>::
 Restart.gd::GDScript::-1::1695535619::0::1::::<>Button<>::
 VideoStreamPlayer.gd::GDScript::-1::1696065474::0::1::::<>VideoStreamPlayer<>::
@@ -321,10 +322,10 @@ Kami's Lookout.jpg::CompressedTexture2D::5744069409284105763::1696065924::169606
 Land-of-the-Kais.png::CompressedTexture2D::842762199834661104::1695505009::1695505013::1::::<><>::
 Stage1.png::CompressedTexture2D::949838456113742268::1635692242::1677956222::1::::<><>::
 Stage2.png::CompressedTexture2D::5553196226767964383::1635692242::1677956222::1::::<><>::
-::res://Stages/Stage Assets/::1696093356
+::res://Stages/Stage Assets/::1696095050
 kame-house-dragon-ball-z-moewalls-com.ogv::VideoStreamTheora::-1::1696065266::0::1::::<><>::
 Ledge.gd::GDScript::-1::1678108450::0::1::::<>Area2D<>::
-Ledge.tscn::PackedScene::737517717914377152::1696093356::0::1::::<><>::res://Stages/Stage Assets/Ledge.gd<>uid://dfr8p338tv853
+Ledge.tscn::PackedScene::737517717914377152::1696095050::0::1::::<><>::res://Stages/Stage Assets/Ledge.gd<>uid://dfr8p338tv853
 StageCamera.gd::GDScript::-1::1677959862::0::1::::<>Camera2D<>::
 ::res://Test/::1695492294
 Camera2DTest.gd::GDScript::-1::1677956183::0::1::::<>Camera2D<>::
@@ -341,24 +342,24 @@ Projectile_Fox_Laser.gd::GDScript::-1::1695495984::0::1::::<>Area2D<>::
 Projectile_Fox_Laser.tscn::PackedScene::7843284751375268027::1695498458::0::1::::<><>::uid://ctj2w8tdhr7od<>res://Test/Projectile/Projectile_Fox_Laser.gd
 ::res://Test/Stage Assets/::1695488973
 Ledge.tscn::PackedScene::-1::1677956183::0::1::::<><>::res://Test/Ledge_L.gd
-::res://UI/::1696093357
+::res://UI/::1696095051
 Exit to Main Menu1.gd::GDScript::-1::1696079834::0::1::::<>Button<>::
 Exit to Main Menu2.gd::GDScript::-1::1696079861::0::1::::<>Button<>::
-player_1_wins.tscn::PackedScene::2877935267999972678::1696093357::0::1::::<><>::uid://016j20kmwcjg<>uid://csx4dq3y5x2og<>res://UI/Rematch1.gd<>res://UI/Exit to Main Menu1.gd
-player_2_wins.tscn::PackedScene::8309328945277711033::1696093357::0::1::::<><>::uid://016j20kmwcjg<>uid://csx4dq3y5x2og<>res://UI/Rematch2.gd<>res://UI/Exit to Main Menu2.gd
+player_1_wins.tscn::PackedScene::2877935267999972678::1696095051::0::1::::<><>::uid://016j20kmwcjg<>uid://csx4dq3y5x2og<>res://UI/Rematch1.gd<>res://UI/Exit to Main Menu1.gd
+player_2_wins.tscn::PackedScene::8309328945277711033::1696095051::0::1::::<><>::uid://016j20kmwcjg<>uid://csx4dq3y5x2og<>res://UI/Rematch2.gd<>res://UI/Exit to Main Menu2.gd
 Rematch1.gd::GDScript::-1::1696079478::0::1::::<>Button<>::
 Rematch2.gd::GDScript::-1::1696079735::0::1::::<>Button<>::
-::res://UI/MainMenu/::1696093356
+::res://UI/MainMenu/::1696095050
 Dragon-Ball-Z-goku-Background-video-loop-neon-fast-_.ogv::VideoStreamTheora::-1::1695504356::0::1::::<><>::
-main_menu.tscn::PackedScene::1084616346381057576::1696093356::0::1::::<><>::res://UI/MainMenu/Scripts/main_menu.gd<>res://UI/MainMenu/Dragon-Ball-Z-goku-Background-video-loop-neon-fast-_.ogv<>res://UI/MainMenu/VideoStreamPlayer.gd
+main_menu.tscn::PackedScene::1084616346381057576::1696095050::0::1::::<><>::res://UI/MainMenu/Scripts/main_menu.gd<>res://UI/MainMenu/Dragon-Ball-Z-goku-Background-video-loop-neon-fast-_.ogv<>res://UI/MainMenu/VideoStreamPlayer.gd
 VideoStreamPlayer.gd::GDScript::-1::1696053677::0::1::::<>VideoStreamPlayer<>::
 ::res://UI/MainMenu/Scripts/::1696056145
 main_menu.gd::GDScript::-1::1696056145::0::1::::<>Control<>::
-::res://UI/Map_Select/::1696093357
-default_theme.tres::Theme::9047167750766656127::1696089930::0::1::::<><>::
+::res://UI/Map_Select/::1696095050
+default_theme.tres::Theme::9047167750766656127::1696094004::0::1::::<><>::
 level_select_screen.gd::GDScript::-1::1696073991::0::1::::<>Control<>::
-level_select_screen.tscn::PackedScene::4417791270058123696::1696093357::0::1::::<><>::uid://d15rsb5jyxtgp<>res://UI/Map_Select/level_select_screen.gd<>res://UI/Map_Select/vegeta-ultra-ego.3840x2160.ogv<>res://UI/Map_Select/VideoStreamPlayer.gd
+level_select_screen.tscn::PackedScene::4417791270058123696::1696095050::0::1::::<><>::uid://d15rsb5jyxtgp<>res://UI/Map_Select/level_select_screen.gd<>res://UI/Map_Select/vegeta-ultra-ego.3840x2160.ogv<>res://UI/Map_Select/VideoStreamPlayer.gd
 lvl_btn.gd::GDScript::-1::1696054368::0::1::::<>Button<>::
-lvl_btn.tscn::PackedScene::440815288688597126::1696093357::0::1::::<><>::
+lvl_btn.tscn::PackedScene::440815288688597126::1696095050::0::1::::<><>::
 vegeta-ultra-ego.3840x2160.ogv::VideoStreamTheora::-1::1696056564::0::1::::<><>::
 VideoStreamPlayer.gd::GDScript::-1::1696063947::0::1::::<>VideoStreamPlayer<>::
